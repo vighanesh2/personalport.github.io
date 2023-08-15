@@ -1,0 +1,132 @@
+
+@import url('https://fonts.cdnfonts.com/css/noir'); 
+
+
+body {
+  background-image: url('background\ image.jpg');
+  background-size: cover;
+  font-family: 'Noir', sans-serif;
+
+}
+.exp-section{
+    padding-left:200px;
+    padding-top:100px;
+}
+.sidebar {
+    position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 250px;
+      background-color: white;
+      color: #2c2cab;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+    
+    .logo {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .menu ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .menu li {
+      padding: 15px 0;
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .menu a {
+      text-decoration: none;
+      color: #2c2cab;
+      font-weight: bold;
+      font-size: 18px;
+      position: relative;
+    }
+    
+    .menu a::before {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #66c2ff;
+      transition: width 0.3s ease;
+    }
+    
+    .menu li:hover {
+      background-color: #f4f4f4;
+      transform: translateX(5px);
+    }
+    
+    .menu a:hover::before {
+      width: 100%;
+    }
+    
+    .content {
+      margin-left: 250px; /* Width of the sidebar */
+      padding: 20px;
+      transition: margin-left 0.3s ease;
+    }
+    
+    .contact {
+        text-align: center;
+        margin-top: 40px;
+      }
+      .contact-title{
+        color:white;
+      }
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin-top: 20px;
+      }
+      
+      .contact-item {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      
+      .contact-item img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+      }
+      
+      .contact-item h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      
+      .contact-item p {
+        font-size: 16px;
+      }
+      
+      .contact-item a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      
+      .contact-item a:hover {
+        color: #0056b3;
+      }
+      
+      .contact-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }

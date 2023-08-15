@@ -1,0 +1,226 @@
+@import url('https://fonts.cdnfonts.com/css/noir'); 
+
+
+body {
+  background-image: url('background\ image.jpg');
+  background-size: cover;
+  font-family: 'Noir', sans-serif;
+
+}
+.title-div{
+  text-align: center;
+}
+.Title{
+  color: white;
+  font-family: 'Noir', sans-serif;
+  font-size: 56px;
+  
+
+}
+.subtitle{
+  padding-left: 300px;
+  padding-right: 300px;
+
+  color: white;
+  font-family: 'Noir', sans-serif;
+  text-align: center;
+
+}
+
+.hero-section{
+ margin-left: 250px;
+  
+  
+}
+.mypic{
+  text-align: center;
+
+}
+.profilepic{
+  height: 300px;
+  width:300px;
+
+}
+.resume-button-div{
+  text-align: center;
+}
+@property --gap{
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 0;
+}
+@property --angle{
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+
+img {
+  --border: 15px;
+  --gap: 12px;
+  --color: white;
+  
+  width: 200px;
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin: 20px;
+  cursor: pointer;
+  padding: calc(var(--border) + var(--gap));
+  
+  --angle: 90deg;
+  background:
+    radial-gradient(farthest-side,var(--color) 97%,#0000 101%) 85.35% 85.35%,
+    conic-gradient(from calc(180deg - var(--angle)/2),#0000 var(--angle),var(--color) 0),
+    radial-gradient(farthest-side,var(--color) 97%,#0000 101%) 14.65% 85.35%;
+  background-size: var(--border) var(--border),auto;
+  background-repeat: no-repeat;
+  
+  -webkit-mask:
+    radial-gradient(farthest-side, 
+     #000  calc(99%  - calc(var(--border) + var(--gap))),
+     #0000 calc(100% - calc(var(--border) + var(--gap))) 
+           calc(99%  - var(--border)), 
+     #000  calc(100% - var(--border)));
+          mask:
+    radial-gradient(farthest-side, 
+     #000  calc(99%  - calc(var(--border) + var(--gap))),
+     #0000 calc(100% - calc(var(--border) + var(--gap))) 
+           calc(99%  - var(--border)), 
+     #000  calc(100% - var(--border)));
+  transition: --angle .4s,--gap .4s;
+}
+img:hover {
+  --angle: 0deg;
+  --gap: 5px;
+}
+
+.sidebar {
+position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: white;
+  color: #2c2cab;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 15px 0;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #2c2cab;
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+}
+
+.menu a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #66c2ff;
+  transition: width 0.3s ease;
+}
+
+.menu li:hover {
+  background-color: #f4f4f4;
+  transform: translateX(5px);
+}
+
+.menu a:hover::before {
+  width: 100%;
+}
+
+.content {
+  margin-left: 250px; /* Width of the sidebar */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Add this CSS to your existing styles.css file */
+
+.resume-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #66c2ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #4fa3ff;
+}
+/* Add this CSS to your existing styles.css file */
+
+.skills-section {
+  background-color: #f4f4f4;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-category {
+  width: 48%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.skills-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  margin-bottom: 10px;
+}
+
+.skills-list ul ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.skills-list ul ul li {
+  margin-bottom: 5px;
+}
+
+
